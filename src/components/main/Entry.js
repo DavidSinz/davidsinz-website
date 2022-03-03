@@ -1,4 +1,4 @@
-const Header = () => {
+const Entry = () => {
   return (
     <div>
       <span>Hi, my name is</span>
@@ -12,4 +12,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Entry;
