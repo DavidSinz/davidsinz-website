@@ -1,0 +1,21 @@
+html {
+  font-size: 130%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.nav-bar {
+  display: flex;
+  background-color: aquamarine;
+}
+
+.nav-bar a {
+  padding: 1rem;
+}
+
+.nav-bar a:hover {
+  background-color: aqua;
+}
