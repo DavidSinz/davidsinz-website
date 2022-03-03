@@ -15,12 +15,20 @@ h1 {
   font-size: 2em;
   font-weight: 900;
   color: #1b7f7a;
-  text-shadow: 0.1rem 0.1rem 0 #4c4a59;
-  margin: 0;
+  margin: 0.5rem;
 }
 
 h2 {
   color: #4caba6;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  margin: 1rem 0;
 }
 
 body {
@@ -28,7 +36,8 @@ body {
   margin: 0;
 }
 
-section {
+section,
+footer {
   padding: 1rem;
 }
 
@@ -38,6 +47,15 @@ section {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+footer,
+.nav-bar {
+  color: #f2cdac;
+  background-color: #4c4a59;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn {
@@ -78,11 +96,6 @@ section {
 
 .nav-bar {
   padding: 0 0 0 0.2rem;
-  color: #f2cdac;
-  background-color: #4c4a59;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .nav-bar #logo,

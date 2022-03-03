@@ -1,3 +1,12 @@
+import {
+  FaJs,
+  FaReact,
+  FaNodeJs,
+  FaWordpressSimple,
+  FaHtml5,
+  FaCss3Alt,
+} from "react-icons/fa";
+
 const About = () => {
   return (
     <section>
@@ -16,12 +25,24 @@ const About = () => {
       </p>
       <p>Here are a few technologies I've been working with recently:</p>
       <ul>
-        <li>JavaScript</li>
-        <li>React</li>
-        <li>Node.js</li>
-        <li>Wordpress</li>
-        <li>HTML</li>
-        <li>CSS3</li>
+        <li>
+          <FaJs /> JavaScript
+        </li>
+        <li>
+          <FaReact /> React
+        </li>
+        <li>
+          <FaNodeJs /> Node.js
+        </li>
+        <li>
+          <FaWordpressSimple /> Wordpress
+        </li>
+        <li>
+          <FaHtml5 /> HTML
+        </li>
+        <li>
+          <FaCss3Alt /> CSS3
+        </li>
       </ul>
     </section>
   );
