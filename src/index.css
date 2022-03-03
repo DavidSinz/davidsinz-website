@@ -1,10 +1,39 @@
+/**
+ * #4C4A59 grau
+ * #1B7F7A grün
+ * #0897B4 blau
+ * #4CABA6 türkis
+ * #F2CDAC beige
+ */
+
 html {
-  font-size: 130%;
+  font-size: 150%;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
   padding: 0;
   margin: 0;
+}
+
+button {
+  color: #0897b4;
+  font-size: 1em;
+  font-weight: bold;
+  background-color: #fff;
+  margin: 1rem;
+  padding: 0.7rem 1.4rem;
+  border: 0.2rem solid #0897b4;
+  box-shadow: 6px 6px 12px 0px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  transition: all 0.2s 0s ease;
+}
+
+button:hover {
+  background-color: rgba(8, 151, 180, 0.05);
+  box-shadow: 6px 6px 12px 0px rgba(0, 0, 0, 0.15);
+  margin-top: 0.9rem;
+  margin-bottom: 1.1rem;
 }
 
 .nav-bar {
