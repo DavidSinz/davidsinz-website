@@ -1,6 +1,6 @@
 import Card from "../ui/Card";
 
-const Experience = () => {
+const Experiences = () => {
   return (
     <div>
       <h2>Projects I've built</h2>
@@ -13,4 +13,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default Experiences;

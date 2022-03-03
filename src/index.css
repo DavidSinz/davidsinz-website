@@ -16,7 +16,7 @@ h1 {
 }
 
 h2 {
-  color: #4CABA6;
+  color: #4caba6;
 }
 
 body {
@@ -24,7 +24,7 @@ body {
   margin: 0;
 }
 
-button {
+.btn {
   color: #0897b4;
   font-size: 1em;
   font-weight: bold;
@@ -38,7 +38,7 @@ button {
   transition: all 0.2s 0s ease;
 }
 
-button:hover {
+.btn:hover {
   background-color: rgba(8, 151, 180, 0.05);
   box-shadow: 0.3rem 0.3rem 0.6rem 0 rgba(0, 0, 0, 0.15);
   margin-top: 0.9rem;
@@ -63,19 +63,23 @@ button:hover {
 
 .nav-bar {
   display: flex;
-  background-color: aquamarine;
+  background-color: #4c4a59;
 }
 
-.nav-bar a {
-  padding: 1rem;
+.nav-bar .nav-item {
+  color: #F2CDAC;
   font-size: 1.2em;
-  color: white;
   text-transform: uppercase;
   text-decoration: none;
+  padding: 1rem;
+  border: none;
+  background-color: #4c4a59;
+  cursor: pointer;
 }
 
-.nav-bar a:hover {
-  background-color: aqua;
+.nav-bar .nav-item:hover {
+  color:#4c4a59;
+  background-color: #4CABA6;
 }
 
 .nav-bar #logo {
