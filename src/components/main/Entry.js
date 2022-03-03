@@ -1,6 +1,6 @@
 const Entry = () => {
   return (
-    <div>
+    <section id="entry">
       <span>Hi, my name is</span>
       <h1>David Sinz</h1>
       <span>I build web applications</span>
@@ -8,7 +8,7 @@ const Entry = () => {
         I'm a web developer, specializing in HTML, CSS and JavaScript.
         Currently, i'm focused on building projects with React and Redux.
       </p>
-    </div>
+    </section>
   );
 };
 

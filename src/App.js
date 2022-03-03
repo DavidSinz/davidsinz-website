@@ -8,18 +8,12 @@ import Navbar from "./components/ui/Navbar";
 function App() {
   return (
     <>
-      <header className="container">
-        <Navbar />
-      </header>
-      <main className="container">
-        <Entry />
-        <About />
-        <Experience />
-        <Contact />
-      </main>
-      <footer className="container">
-        <Footer />
-      </footer>
+      <Navbar />
+      <Entry />
+      <About />
+      <Experience />
+      <Contact />
+      <Footer />
     </>
   );
 }

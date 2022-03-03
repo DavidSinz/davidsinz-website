@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <div>
+    <section>
       <h2>About Me</h2>
       <p>
         Hello! My name is David and i enjoy building projects for the internet.
@@ -23,7 +23,7 @@ const About = () => {
         <li>HTML</li>
         <li>CSS3</li>
       </ul>
-    </div>
+    </section>
   );
 };
 

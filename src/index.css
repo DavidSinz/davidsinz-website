@@ -7,12 +7,16 @@
  */
 
 html {
-  font-size: 150%;
+  font-size: 130%;
   font-family: "Roboto", sans-serif;
 }
 
 h1 {
+  font-size: 2em;
+  font-weight: 900;
   color: #1b7f7a;
+  text-shadow: 0.1rem 0.1rem 0 #4c4a59;
+  margin: 0;
 }
 
 h2 {
@@ -24,8 +28,16 @@ body {
   margin: 0;
 }
 
-header {
-  background-color: #4c4a59;
+section {
+  padding: 1rem;
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .btn {
@@ -53,7 +65,6 @@ header {
   background-color: rgba(27, 127, 122, 0.05);
   margin: 1rem;
   padding: 2rem;
-  width: 33%;
   border: 0.2rem solid #1b7f7a;
   border-radius: 0.5rem;
   box-shadow: 0.3rem 0.3rem 0.6rem 0 rgba(0, 0, 0, 0.07);
@@ -65,31 +76,65 @@ header {
   width: 100%;
 }
 
-.container {
-  padding: 0 3rem;
+.nav-bar {
+  padding: 0 0 0 0.2rem;
+  color: #f2cdac;
+  background-color: #4c4a59;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.nav-bar {
-  display: flex;
-  background-color: #4c4a59;
+.nav-bar #logo,
+.nav-bar #menu-icon {
+  font-weight: bold;
+  padding: 0.7rem;
+  margin: 0.5rem;
+}
+
+.nav-bar #logo {
+  font-size: 1em;
+  border: 0.1rem solid #f2cdac;
+  border-radius: 50%;
+}
+
+.nav-bar #menu-icon {
+  font-size: 2em;
+  display: block;
 }
 
 .nav-bar .nav-item {
-  color: #F2CDAC;
   font-size: 1.2em;
   text-transform: uppercase;
   text-decoration: none;
   padding: 1rem;
   border: none;
-  background-color: #4c4a59;
+  background-color: rgba(0, 0, 0, 0);
   cursor: pointer;
+  display: none;
 }
 
 .nav-bar .nav-item:hover {
-  color:#4c4a59;
-  background-color: #4CABA6;
+  color: #4c4a59;
+  background-color: #4caba6;
 }
 
 .nav-bar #logo {
   margin-right: auto;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }
