@@ -14,8 +14,16 @@ body {
 
 .nav-bar a {
   padding: 1rem;
+  font-size: 1.2em;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 
 .nav-bar a:hover {
   background-color: aqua;
+}
+
+.nav-bar #logo {
+  margin-right: auto;
 }
