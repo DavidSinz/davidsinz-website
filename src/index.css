@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Source+Code+Pro:ital,wght@0,300;0,500;0,700;1,300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Source+Code+Pro:ital,wght@0,300;0,500;0,700;1,300&display=swap");
 
 * {
   margin: 0;
@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
   background-color: rgba(29, 29, 29, 1);
   color: #fff;
   letter-spacing: 1px;
@@ -42,7 +42,7 @@ a:focus {
 }
 
 button {
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
   background-color: rgba(0, 0, 0, 0);
   color: #0bf1d2;
   border: 1px solid #0bf1d2;
@@ -96,6 +96,7 @@ footer {
   width: calc(100% + 4rem);
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 #recent-projects .portfolio-img {
@@ -135,9 +136,11 @@ footer {
   flex-direction: column;
 }
 
-@media (min-width: 320px) {
-}
 @media (min-width: 481px) {
+  main {
+    font-size: 110%;
+  }
+
   section {
     padding: 5rem;
   }
@@ -151,18 +154,41 @@ footer {
     width: 25%;
   }
 }
-@media (min-width: 641px) {
-}
+
 @media (min-width: 961px) {
   body {
-    padding: 0 10rem;
+    font-size: 120%;
+  }
+
+  section {
+    padding: 10rem;
+  }
+
+  #recent-projects {
+    margin-left: -10rem;
+    width: calc(100% + 20rem);
+  }
+
+  #recent-projects .portfolio-img {
+    width: 20%;
   }
 }
-@media (min-width: 1025px) {
-  
-}
+
 @media (min-width: 1281px) {
   body {
-    padding: 0 20rem;
+    font-size: 130%;
+  }
+
+  section {
+    padding: 20rem;
+  }
+
+  #recent-projects {
+    margin-left: -20rem;
+    width: calc(100% + 40rem);
+  }
+
+  #recent-projects .portfolio-img {
+    width: 10%;
   }
 }

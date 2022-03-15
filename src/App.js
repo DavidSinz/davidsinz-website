@@ -19,7 +19,7 @@ const App = () => {
       </header>
       <main>
         <section id="home">
-          <div>
+          <div id="greet-area">
             <h1>
               Hi,
               <br />
