@@ -2,10 +2,12 @@ import img1 from "./images/img1.jpg";
 import img2 from "./images/img2.jpg";
 import img3 from "./images/img3.jpg";
 import img4 from "./images/img4.jpg";
+import MatrixEffect from "./components/MatrixEffect.js";
 
 const App = () => {
   return (
     <>
+      <MatrixEffect id="matrix" />
       <header>
         <nav>
           <ul>
@@ -41,10 +43,22 @@ const App = () => {
             <a href="https://github.com/DavidSinz">my GitHub</a> account.
           </p>
           <div id="recent-projects">
-            <div class="portfolio-img"><img src={img1} alt="1" /><p>Click!</p></div>
-            <div class="portfolio-img"><img src={img2} alt="1" /><p>Click!</p></div>
-            <div class="portfolio-img"><img src={img3} alt="1" /><p>Click!</p></div>
-            <div class="portfolio-img"><img src={img4} alt="1" /><p>Click!</p></div>
+            <div className="portfolio-img">
+              <img src={img1} alt="1" />
+              <p>View</p>
+            </div>
+            <div className="portfolio-img">
+              <img src={img2} alt="1" />
+              <p>View</p>
+            </div>
+            <div className="portfolio-img">
+              <img src={img3} alt="1" />
+              <p>View</p>
+            </div>
+            <div className="portfolio-img">
+              <img src={img4} alt="1" />
+              <p>View</p>
+            </div>
           </div>
         </section>
         <section id="skills">
@@ -58,20 +72,21 @@ const App = () => {
           {/*<canvas id="learned-skills"></canvas>*/}
         </section>
         <section id="contact">
-          <h2>Contact me</h2>
-          <p>
-            I'm interested in job offers and freelance opportunities. However,
-            if you have another request or question, don't hesitate to use the
-            form.
-          </p>
-          <form autocomplete="off">
-            <input type="text" name="name" value="" placeholder="Name" />
-            <input type="email" name="email" value="" placeholder="E-Mail" />
-            <input type="text" name="subject" value="" placeholder="Subject" />
+          <div id="contact-text">
+            <h2>Contact me</h2>
+            <p>
+              I'm interested in job offers and freelance opportunities. However,
+              if you have another request or question, don't hesitate to use the
+              form.
+            </p>
+          </div>
+          <form id="contact-form" autoComplete="off">
+            <input type="text" name="name" placeholder="Name" />
+            <input type="email" name="email" placeholder="E-Mail" />
+            <input type="text" name="subject" placeholder="Subject" />
             <textarea
               type="text"
               name="message"
-              value=""
               placeholder="Message"
               rows="5"
             />

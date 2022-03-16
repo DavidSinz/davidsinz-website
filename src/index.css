@@ -93,6 +93,7 @@ footer {
 
 #recent-projects {
   margin-left: -2rem;
+  margin-bottom: 2rem;
   width: calc(100% + 4rem);
   display: flex;
   flex-wrap: wrap;
@@ -134,6 +135,12 @@ footer {
 #contact {
   display: flex;
   flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+#matrix {
+  position: absolute;
+  z-index: -100;
 }
 
 @media (min-width: 481px) {
@@ -155,13 +162,25 @@ footer {
   }
 }
 
+@media (min-width: 641px) {
+  #contact {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  #contact > * {
+    width: 50%;
+  }
+}
+
 @media (min-width: 961px) {
   body {
     font-size: 120%;
   }
 
   section {
-    padding: 10rem;
+    padding: 5rem 10rem;
   }
 
   #recent-projects {
@@ -172,6 +191,10 @@ footer {
   #recent-projects .portfolio-img {
     width: 20%;
   }
+
+  #contact {
+    gap: 5rem;
+  }
 }
 
 @media (min-width: 1281px) {
@@ -180,7 +203,7 @@ footer {
   }
 
   section {
-    padding: 20rem;
+    padding: 5rem 20rem;
   }
 
   #recent-projects {
