@@ -2,18 +2,31 @@ import img1 from "./images/img1.jpg";
 import img2 from "./images/img2.jpg";
 import img3 from "./images/img3.jpg";
 import img4 from "./images/img4.jpg";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const App = () => {
   const canvasRef = useRef();
   const homeRef = useRef();
   const yPosRef = useRef([]);
   const contactRef = useRef();
+  const [toSend, setToSend] = useState({
+    subject: "",
+    message: "",
+  });
 
   const onContact = () => {
     contactRef.current.scrollIntoView({
       behavior: "smooth",
     });
+  };
+
+  const onSubmit = (event) => {
+    event.preventDefault();
+    window.open(`mailto:davidsinz@gmx.net?subject=${toSend.subject}&body=${toSend.message}`)
+  };
+
+  const handleFormInput = (event) => {
+    setToSend({ ...toSend, [event.target.name]: event.target.value });
   };
 
   const draw = (ctx) => {
@@ -128,15 +141,23 @@ const App = () => {
               form.
             </p>
           </div>
-          <form id="contact-form" autoComplete="off">
-            <input type="text" name="name" placeholder="Name" />
-            <input type="email" name="email" placeholder="E-Mail" />
-            <input type="text" name="subject" placeholder="Subject" />
+          <form id="contact-form" onSubmit={onSubmit} autoComplete="off">
+            <input
+              type="text"
+              name="subject"
+              placeholder="Subject"
+              value={toSend.subject}
+              onChange={handleFormInput}
+              required
+            />
             <textarea
               type="text"
               name="message"
               placeholder="Message"
               rows="5"
+              value={toSend.message}
+              onChange={handleFormInput}
+              required
             />
             <button type="submit" name="submit">
               Send message!

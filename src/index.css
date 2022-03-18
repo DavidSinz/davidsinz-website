@@ -43,11 +43,16 @@ a:focus {
 
 button {
   font-family: "Press Start 2P", cursive;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(29, 29, 29, 1);
   color: #0bf1d2;
-  border: 1px solid #0bf1d2;
+  border: 2px solid #0bf1d2;
   padding: 0.7rem 2rem;
   margin: 0.7rem 0;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgba(60, 60, 60, 1);
 }
 
 form {
@@ -57,11 +62,19 @@ form {
 
 input,
 textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+input,
+textarea {
   background-color: rgba(118, 115, 116, 0.3);
   border: none;
   border-bottom: 2px solid rgba(118, 115, 116, 0.3);
   padding: 1rem;
   margin-bottom: 0.7rem;
+  color: #fff;
+  font-size: 0.7em;
 }
 
 input:focus,
@@ -176,7 +189,7 @@ footer {
 
 @media (min-width: 961px) {
   body {
-    font-size: 120%;
+    font-size: 130%;
   }
 
   section {
@@ -199,16 +212,16 @@ footer {
 
 @media (min-width: 1281px) {
   body {
-    font-size: 130%;
+    font-size: 160%;
   }
 
   section {
-    padding: 5rem 20rem;
+    padding: 5rem 15rem;
   }
 
   #recent-projects {
-    margin-left: -20rem;
-    width: calc(100% + 40rem);
+    margin-left: -15rem;
+    width: calc(100% + 30rem);
   }
 
   #recent-projects .portfolio-img {
