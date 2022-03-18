@@ -118,6 +118,8 @@ footer {
   text-align: center;
   overflow: hidden;
   width: 50%;
+  height: 200px;
+  cursor: pointer;
 }
 
 #recent-projects .portfolio-img p {
@@ -136,6 +138,9 @@ footer {
 
 #recent-projects .portfolio-img img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   opacity: 0.3;
   transition: 0.5s all ease-in-out;
 }

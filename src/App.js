@@ -1,7 +1,7 @@
-import img1 from "./images/img1.jpg";
-import img2 from "./images/img2.jpg";
-import img3 from "./images/img3.jpg";
-import img4 from "./images/img4.jpg";
+import img1 from "./images/amazon-landingpage-clone.png";
+import img2 from "./images/api-app.png";
+import img3 from "./images/asteroid.png";
+import img4 from "./images/smoothie-fun.png";
 import { useEffect, useRef, useState } from "react";
 
 const App = () => {
@@ -104,19 +104,27 @@ const App = () => {
             <a href="https://github.com/DavidSinz">my GitHub</a> account.
           </p>
           <div id="recent-projects">
-            <div className="portfolio-img">
+            <div onClick={() => {
+              window.open("https://github.com/DavidSinz/clone-website");
+            }} className="portfolio-img">
               <img src={img1} alt="1" />
               <p>View</p>
             </div>
-            <div className="portfolio-img">
+            <div onClick={() => {
+              window.open("https://github.com/DavidSinz/api-app");
+            }} className="portfolio-img">
               <img src={img2} alt="1" />
               <p>View</p>
             </div>
-            <div className="portfolio-img">
+            <div onClick={() => {
+              window.open("https://github.com/DavidSinz/asteroids-game");
+            }} className="portfolio-img">
               <img src={img3} alt="1" />
               <p>View</p>
             </div>
-            <div className="portfolio-img">
+            <div onClick={() => {
+              window.open("https://github.com/DavidSinz/smoothie-fun");
+            }} className="portfolio-img">
               <img src={img4} alt="1" />
               <p>View</p>
             </div>
