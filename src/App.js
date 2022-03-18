@@ -2,12 +2,60 @@ import img1 from "./images/img1.jpg";
 import img2 from "./images/img2.jpg";
 import img3 from "./images/img3.jpg";
 import img4 from "./images/img4.jpg";
-import MatrixEffect from "./components/MatrixEffect.js";
+import { useEffect, useRef } from "react";
 
 const App = () => {
+  const canvasRef = useRef();
+  const homeRef = useRef();
+  const yPosRef = useRef([]);
+  const contactRef = useRef();
+
+  const onContact = () => {
+    contactRef.current.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
+  const draw = (ctx) => {
+    setTimeout(function () {
+      ctx.fillStyle = "#0001";
+      ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+      ctx.fillStyle = "#0f0";
+      ctx.font = "15pt monospace";
+      yPosRef.current.forEach((y, ind) => {
+        const text = String.fromCharCode(Math.random() * 128);
+        const x = ind * 20;
+        ctx.fillText(text, x, y);
+        if (y > 100 + Math.random() * 10000) yPosRef.current[ind] = 0;
+        else yPosRef.current[ind] = y + 20;
+      });
+      requestAnimationFrame(() => draw(ctx, yPosRef.current));
+    }, 20);
+  };
+
+  useEffect(() => {
+    const ctx = canvasRef.current.getContext("2d");
+    const w = (ctx.canvas.width = document.body.offsetWidth);
+    const h = (ctx.canvas.height = document.body.offsetHeight);
+    yPosRef.current = Array(Math.floor(w / 20) + 1).fill(0);
+    ctx.fillStyle = "#000";
+    ctx.fillRect(0, 0, w, h);
+    requestAnimationFrame(() => draw(ctx));
+    const handleResize = (event) => {
+      ctx.canvas.height = homeRef.current.clientHeight;
+      ctx.canvas.width = homeRef.current.clientWidth;
+      yPosRef.current = Array(Math.floor(ctx.canvas.width / 20) + 1).fill(0);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
-      <MatrixEffect id="matrix" />
+      <canvas ref={canvasRef} id="matrix" />
       <header>
         <nav>
           <ul>
@@ -20,7 +68,7 @@ const App = () => {
         </nav>
       </header>
       <main>
-        <section id="home">
+        <section ref={homeRef} id="home">
           <div id="greet-area">
             <h1>
               Hi,
@@ -30,7 +78,7 @@ const App = () => {
               web developer
             </h1>
             <p className="sub-heading">Front End developer</p>
-            <button>Contact me!</button>
+            <button onClick={onContact}>Contact me!</button>
           </div>
         </section>
         <section id="portfolio">
@@ -71,7 +119,7 @@ const App = () => {
           </p>
           {/*<canvas id="learned-skills"></canvas>*/}
         </section>
-        <section id="contact">
+        <section ref={contactRef} id="contact">
           <div id="contact-text">
             <h2>Contact me</h2>
             <p>
