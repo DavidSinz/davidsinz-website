@@ -94,6 +94,16 @@ const App = () => {
             <button onClick={onContact}>Contact me!</button>
           </div>
         </section>
+        <section id="skills">
+          <h2>My Skills</h2>
+          <p>
+            I'm a passionate developer, constantly seeking opportunity to
+            increase my experience and my skill set. I had the chance to work on
+            numerous projects and to learn popular web technologies. Currently,
+            I'm interested in learning react and building my own portfolio.
+          </p>
+          {/*<canvas id="learned-skills"></canvas>*/}
+        </section>
         <section id="portfolio">
           <h2>My Portfolio</h2>
           <p>
@@ -129,16 +139,6 @@ const App = () => {
               <p>View</p>
             </div>
           </div>
-        </section>
-        <section id="skills">
-          <h2>My Skills</h2>
-          <p>
-            I'm a passionate developer, constantly seeking opportunity to
-            increase my experience and my skill set. I had the chance to work on
-            numerous projects and to learn popular web technologies. Currently,
-            I'm interested in learning react and building my own portfolio.
-          </p>
-          {/*<canvas id="learned-skills"></canvas>*/}
         </section>
         <section ref={contactRef} id="contact">
           <div id="contact-text">
