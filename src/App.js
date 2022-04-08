@@ -22,7 +22,9 @@ const App = () => {
 
   const onSubmit = (event) => {
     event.preventDefault();
-    window.open(`mailto:davidsinz@gmx.net?subject=${toSend.subject}&body=${toSend.message}`)
+    window.open(
+      `mailto:davidsinz@gmx.net?subject=${toSend.subject}&body=${toSend.message}`
+    );
   };
 
   const handleFormInput = (event) => {
@@ -105,43 +107,57 @@ const App = () => {
           {/*<canvas id="learned-skills"></canvas>*/}
         </section>
         <section id="portfolio">
-          <h2>My Portfolio</h2>
-          <p>
-            A small gallery of recent projects chosen by me. I've done them all
-            alone or together with amazing people I had the chance to work with
-            together. It's only the tip of the iceberg compared to the entire
-            list. Interested to see some more? Visit{" "}
-            <a href="https://github.com/DavidSinz">my GitHub</a> account.
-          </p>
+          <div className="section-text">
+            <h2>My Portfolio</h2>
+            <p>
+              A small gallery of recent projects chosen by me. I've done them
+              all alone or together with amazing people I had the chance to work
+              with together. It's only the tip of the iceberg compared to the
+              entire list. Interested to see some more? Visit{" "}
+              <a href="https://github.com/DavidSinz">my GitHub</a> account.
+            </p>
+          </div>
           <div id="recent-projects">
-            <div onClick={() => {
-              window.open("https://github.com/DavidSinz/clone-website");
-            }} className="portfolio-img">
+            <div
+              onClick={() => {
+                window.open("https://github.com/DavidSinz/clone-website");
+              }}
+              className="portfolio-img"
+            >
               <img src={img1} alt="1" />
               <p>View</p>
             </div>
-            <div onClick={() => {
-              window.open("https://github.com/DavidSinz/api-app");
-            }} className="portfolio-img">
+            <div
+              onClick={() => {
+                window.open("https://github.com/DavidSinz/api-app");
+              }}
+              className="portfolio-img"
+            >
               <img src={img2} alt="1" />
               <p>View</p>
             </div>
-            <div onClick={() => {
-              window.open("https://github.com/DavidSinz/asteroids-game");
-            }} className="portfolio-img">
+            <div
+              onClick={() => {
+                window.open("https://github.com/DavidSinz/asteroids-game");
+              }}
+              className="portfolio-img"
+            >
               <img src={img3} alt="1" />
               <p>View</p>
             </div>
-            <div onClick={() => {
-              window.open("https://github.com/DavidSinz/smoothie-fun");
-            }} className="portfolio-img">
+            <div
+              onClick={() => {
+                window.open("https://github.com/DavidSinz/smoothie-fun");
+              }}
+              className="portfolio-img"
+            >
               <img src={img4} alt="1" />
               <p>View</p>
             </div>
           </div>
         </section>
         <section ref={contactRef} id="contact">
-          <div id="contact-text">
+          <div className="section-text">
             <h2>Contact me</h2>
             <p>
               I'm interested in job offers and freelance opportunities. However,

@@ -233,3 +233,29 @@ footer {
     width: 10%;
   }
 }
+
+@media (min-width: 1840px) {
+  body {
+    font-size: 170%;
+  }
+
+  #recent-projects .portfolio-img {
+    width: 25%;
+  }
+
+  #recent-projects {
+    margin-left: 0rem;
+    width: calc(100% + 0rem);
+  }
+
+  #portfolio {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2rem;
+    gap: 5rem;
+  }
+
+  #portfolio > * {
+    width: 50%;
+  }
+}
